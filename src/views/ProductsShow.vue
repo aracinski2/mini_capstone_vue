@@ -29,7 +29,8 @@ export default {
   methods: {
     productsShow: function () {
       console.log("products showwww");
-      axios.get("/api/products/45").then((response) => {
+      console.log(this.$route.params.id);
+      axios.get("/api/products/" + this.$route.params.id).then((response) => {
         console.log(response.data);
         this.product = response.data;
       });
