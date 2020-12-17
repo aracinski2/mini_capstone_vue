@@ -4,7 +4,9 @@
   <div class="home">
     <h1>{{ message }}</h1>
     <div v-for='product in products'>
+      <router-link v-bind:to="`/products/${product.id}`">
       <h3>{{ product.name }}</h3>
+      </router-link>
       <h5>${{ product.price }}</h5>
       <h5>{{ product.description }}</h5><br>
     </div>
