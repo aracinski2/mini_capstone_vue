@@ -1,9 +1,10 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import ProductsIndex from '../views/ProductsIndex.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home.vue';
+import ProductsIndex from '../views/ProductsIndex.vue';
+import Signup from '../views/Signup.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -24,12 +25,17 @@ const routes = [
     name: 'products-index',
     component: ProductsIndex
   },
-]
+  {
+    path: '/signup',
+    name: 'signup',
+    component: Signup
+  },
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
 export default router
